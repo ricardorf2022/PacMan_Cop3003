@@ -9,10 +9,6 @@ constexpr unsigned int CELL_SIZE = 16; //Each cell is 16x16 pixels of Map16
 constexpr unsigned int MAP_HEIGHT = 32; // 31 Cells High, not pixel value
 constexpr unsigned int MAP_WIDTH = 29; // 28 Cells wide, not pixel value
 
-
-
-
-
 enum CellType{ //Enumerator for use in map creation
     Empty = ' ',
     Energizer = 'O',
@@ -29,6 +25,15 @@ enum WallDirection{
     Right
 };
 
+struct Position
+{
+    short x;
+    short y;
+    bool operator==(const Position& i_position)
+    {
+        return this->x == i_position.x && this->y == i_position.y;
+    }
+};
 
 
 #endif //CMAKESFMLMAP_GLOBAL_H

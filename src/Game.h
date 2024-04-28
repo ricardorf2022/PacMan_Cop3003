@@ -8,6 +8,7 @@
 #include <SFML/System.hpp>
 #include "Entity.h"
 #include "Labyrinth.h"
+#include "Ghost.h"
 
 #ifndef GAME_H
 #define GAME_H
@@ -19,10 +20,12 @@ private:
 
     //Player
     Entity * entity;
+    Ghost * ghost;
 
     //Private Functions
     void initWindow();
     void initEntity();
+    void initGhost();
 
 
 
@@ -38,6 +41,8 @@ public:
     void update();
     void renderEntity();
     void render();
+    void updateGhost();
+    void renderGhost();
 
 
 

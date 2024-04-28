@@ -1,12 +1,10 @@
 //
 // Created by kiara on 4/3/2024.
-//
-//
-// Created by kiara on 4/3/2024.
-//
+
 #include <SFML/Graphics.hpp>
 #include <SFML/System.hpp>
 #include <iostream>
+//#include <adomd.h>
 
 #ifndef ENTITY_H
 #define ENTITY_H
@@ -25,6 +23,8 @@ enum ENTITY_ANIMATION_STATE
 
 class Entity {
 
+    unsigned char direction;
+    //Position position;
 private:
     sf::Sprite sprite;
     sf::Texture texture;
@@ -45,18 +45,15 @@ private:
 public:
     Entity();
     virtual ~Entity();
-
-    // float movementSpeed;
-
-// Public Functions
+    unsigned char get_direction();
 
     void move(const float dirX, const float dirY ); // changed to updatedMovement
-
+    void set_position(short i_x, short i_y);
     void updateMovement();
     void updateAnimations();
     void update();
     void render(sf::RenderTarget & target);
-
+    //Position get_postition();
 
 };
 

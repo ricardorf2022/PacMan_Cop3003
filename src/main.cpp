@@ -4,6 +4,7 @@
 #include "Game.h"
 #include "Labyrinth.h"
 #include "Entity.h"
+#include "Ghost.h"
 
 
 int main() {

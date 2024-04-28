@@ -89,16 +89,11 @@ void Labyrinth::load() {
         sprite.setTexture(tileSheetTexture);
         sprite.setScale(sf::Vector2f(1, 1));
     }
-  //  else{
-  //      std::cout << "ERROR: Texture could not be loaded." << std::endl;
-  //  }
 }
 
 void Labyrinth::update() {
     render();
 }
-
-
 
 void Labyrinth::render() {
 
@@ -128,7 +123,6 @@ void Labyrinth::render() {
         }
     }
 }
-
 
 void Labyrinth::checkWall(int row, int col) {
 
